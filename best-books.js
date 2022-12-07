@@ -11,4 +11,7 @@ formEl.addEventListener('submit', function(e) {
   const date = dateEl.value;
 
   // Fetch bestselling books for date and add top 5 to page
+  //api key = 
+
+  //https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=
 });
