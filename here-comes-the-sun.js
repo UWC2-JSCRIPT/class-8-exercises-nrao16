@@ -1,15 +1,14 @@
 // exercise using requestAnimationFrame
 document.addEventListener("DOMContentLoaded", function () {
-let x = 0;
-const imEl = document.getElementById('sun');
-const animate = function() {
-    x++;
-    if (x < window.innerWidth) {
-        const transform = `translateX(${x}px)`;
-        imEl.style.transform = transform;
-        requestAnimationFrame(animate);
+    let rgb = -1;
+    const animate = function () {
+        rgb++;
+        if (rgb <= 255) {
+            document.body.style.backgroundColor = `rgb(${rgb}, ${rgb}, ${rgb})`;
+            requestAnimationFrame(animate);
+            console.log(rgb);
+        }
     }
-}
 
-requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
 });
